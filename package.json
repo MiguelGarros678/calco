@@ -1,0 +1,15 @@
+{
+  "name": "jedolo-bot",
+  "version": "1.0.0",
+  "description": "Bot Telegram de réservation automatisée (JEDOLO)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Swich Tech",
+  "license": "MIT",
+  "dependencies": {
+    "moment-timezone": "^0.5.45",
+    "node-telegram-bot-api": "^0.61.0"
+  }
+}
