@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galerie JEDOLO - Découvrez nos services">
+    <meta name="keywords" content="galerie, JEDOLO, services, Cameroun">
+    <title>Galerie - JEDOLO</title>
+    <link rel="canonical" href="https://jedolomo.pages.dev/gallery.html">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 2rem 0;
+            color: white;
+        }
+
+        nav {
+            background: rgba(255,255,255,0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .gallery-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-info {
+            padding: 1.5rem;
+        }
+
+        .gallery-info h3 {
+            margin-bottom: 0.5rem;
+            color: #667eea;
+        }
+
+        .back-btn {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 25px;
+            margin: 2rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: #5a67d8;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>JEDOLO - Galerie</h1>
+            <p>Découvrez nos services</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="gallery.html">Galerie</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section class="gallery-grid">
+                <article class="gallery-item">
+                    <img src="img/blonde.jpg" alt="Blonde - Service JEDOLO" loading="lazy">
+                    <div class="gallery-info">
+                        <h3>Blonde</h3>
+                        <p>Service professionnel disponible</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item">
+                    <img src="img/maeva.jpg" alt="Maeva - Service JEDOLO" loading="lazy">
+                    <div class="gallery-info">
+                        <h3>Maeva</h3>
+                        <p>Service professionnel disponible</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item">
+                    <img src="img/lorelle.jpg" alt="Lorrelle - Service JEDOLO" loading="lazy">
+                    <div class="gallery-info">
+                        <h3>Lorrelle</h3>
+                        <p>Service professionnel disponible</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item">
+                    <img src="img/elsa.jpg" alt="Elda - Service JEDOLO" loading="lazy">
+                    <div class="gallery-info">
+                        <h3>Elda</h3>
+                        <p>Service professionnel disponible</p>
+                    </div>
+                </article>
+
+                <article class="gallery-item">
+                    <img src="img/lor.jpg" alt="Blanche - Service JEDOLO" loading="lazy">
+                    <div class="gallery-info">
+                        <h3>Blanche</h3>
+                        <p>Service professionnel disponible</p>
+                    </div>
+                </article>
+            </section>
+
+            <a href="index.html" class="back-btn">← Retour à l'accueil</a>
+        </main>
+    </div>
+
+    <script>
+        // Lazy loading et optimisation des images
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.src = img.src;
+                            img.classList.remove('lazy');
+                            imageObserver.unobserve(img);
+                        }
+                    });
+                });
+
+                images.forEach(img => imageObserver.observe(img));
+            }
+        });
+    </script>
+</body>
+</html>

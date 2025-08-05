@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact JEDOLO - Informations de contact et support">
+    <meta name="keywords" content="contact, JEDOLO, support, Cameroun, Telegram">
+    <title>Contact - JEDOLO</title>
+    <link rel="canonical" href="https://jedolomo.pages.dev/contact.html">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 2rem 0;
+            color: white;
+        }
+
+        nav {
+            background: rgba(255,255,255,0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        .contact-content {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .contact-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #667eea;
+        }
+
+        .payment-info {
+            background: #e3f2fd;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+            border-left: 4px solid #2196f3;
+        }
+
+        .payment-info h4 {
+            color: #1976d2;
+            margin-bottom: 0.5rem;
+        }
+
+        .back-btn {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 25px;
+            margin: 2rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: #5a67d8;
+            transform: translateY(-2px);
+        }
+
+        .telegram-link {
+            display: inline-block;
+            background: #0088cc;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 25px;
+            margin: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .telegram-link:hover {
+            background: #006699;
+            transform: translateY(-2px);
+        }
+
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        .hours-table th,
+        .hours-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .hours-table th {
+            background-color: #667eea;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .contact-content {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>JEDOLO - Contact</h1>
+            <p>Nous sommes là pour vous aider</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="gallery.html">Galerie</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main class="contact-content">
+            <section>
+                <h2>Contactez-nous</h2>
+                <p>Pour toute question ou réservation, utilisez les moyens de contact ci-dessous :</p>
+            </section>
+
+            <section class="contact-grid">
+                <article class="contact-card">
+                    <div class="contact-icon">🤖</div>
+                    <h3>Bot Telegram</h3>
+                    <p>Le moyen le plus rapide pour effectuer vos réservations</p>
+                    <a href="https://t.me/jedolo_bot" class="telegram-link">
+                        Ouvrir le Bot
+                    </a>
+                </article>
+
+                <article class="contact-card">
+                    <div class="contact-icon">🕒</div>
+                    <h3>Horaires de service</h3>
+                    <table class="hours-table">
+                        <thead>
+                            <tr>
+                                <th>Jour</th>
+                                <th>Horaires</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Lundi - Vendredi</td>
+                                <td>24h/24</td>
+                            </tr>
+                            <tr>
+                                <td>Weekend</td>
+                                <td>24h/24</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
+
+                <article class="contact-card">
+                    <div class="contact-icon">🏙️</div>
+                    <h3>Zones de service</h3>
+                    <ul style="text-align: left; list-style: none; padding: 0;">
+                        <li>✓ Douala</li>
+                        <li>✓ Yaoundé</li>
+                        <li>✓ Bafoussam</li>
+                        <li>✓ Dschang</li>
+                        <li>✓ Buea</li>
+                        <li>✓ Bamenda</li>
+                        <li>✓ Kribi</li>
+                        <li>✓ Autres villes</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section>
+                <h2>💳 Informations de paiement</h2>
+                <div class="contact-grid">
+                    <div class="payment-info">
+                        <h4>MTN Mobile Money</h4>
+                        <p><strong>Nom :</strong> Rabiatou</p>
+                        <p><strong>Numéro :</strong> 682930754</p>
+                    </div>
+                    <div class="payment-info">
+                        <h4>Orange Money</h4>
+                        <p><strong>Nom :</strong> YINCHOWI WINCHO</p>
+                        <p><strong>Numéro :</strong> 693846621</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>❓ Questions fréquentes</h2>
+                <details style="margin: 1rem 0; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
+                    <summary style="cursor: pointer; font-weight: bold;">Comment effectuer une réservation ?</summary>
+                    <p style="margin-top: 1rem;">Utilisez notre bot Telegram en cliquant sur le lien ci-dessus, puis suivez les instructions étape par étape.</p>
+                </details>
+                
+                <details style="margin: 1rem 0; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
+                    <summary style="cursor: pointer; font-weight: bold;">Quels sont les moyens de paiement acceptés ?</summary>
+                    <p style="margin-top: 1rem;">Nous acceptons MTN Mobile Money et Orange Money. Les informations de paiement sont disponibles ci-dessus.</p>
+                </details>
+                
+                <details style="margin: 1rem 0; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
+                    <summary style="cursor: pointer; font-weight: bold;">Dans quelles villes êtes-vous disponibles ?</summary>
+                    <p style="margin-top: 1rem;">Nous couvrons toutes les principales villes du Cameroun. Consultez la liste complète dans la section "Zones de service".</p>
+                </details>
+            </section>
+
+            <a href="index.html" class="back-btn">← Retour à l'accueil</a>
+        </main>
+
+        <footer style="text-align: center; padding: 2rem; color: white; opacity: 0.8;">
+            <p>&copy; 2024 JEDOLO - Développé par Swich Tech</p>
+            <p>Service de réservation automatisée</p>
+        </footer>
+    </div>
+
+    <script>
+        // Amélioration de l'accessibilité et de l'expérience utilisateur
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animation pour les cartes de contact
+            const cards = document.querySelectorAll('.contact-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+
+            // Amélioration des liens Telegram
+            const telegramLinks = document.querySelectorAll('a[href*="t.me"]');
+            telegramLinks.forEach(link => {
+                link.setAttribute('target', '_blank');
+                link.setAttribute('rel', 'noopener noreferrer');
+            });
+        });
+    </script>
+</body>
+</html>

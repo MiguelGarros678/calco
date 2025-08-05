@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JEDOLO - Service de réservation 100% camerounais">
+    <meta name="keywords" content="réservation, service, Cameroun">
+    <title>JEDOLO - Service de Réservation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 2rem 0;
+            color: white;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .main-content {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .telegram-section {
+            text-align: center;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+
+        .telegram-btn {
+            display: inline-block;
+            background: #0088cc;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,136,204,0.3);
+        }
+
+        .telegram-btn:hover {
+            background: #006699;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,136,204,0.4);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .cities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .city-card {
+            background: #e9ecef;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .city-card:hover {
+            background: #667eea;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: white;
+            opacity: 0.8;
+        }
+
+        .flag {
+            font-size: 1.5rem;
+            margin-left: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+            
+            .main-content {
+                padding: 1rem;
+            }
+            
+            nav ul {
+                flex-direction: column !important;
+                gap: 1rem !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>JEDOLO</h1>
+            <p class="subtitle">Service de réservation 100% camerounais <span class="flag">🇨🇲</span></p>
+        </header>
+
+        <nav style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 10px; margin-bottom: 2rem;">
+            <ul style="list-style: none; display: flex; justify-content: center; gap: 2rem; margin: 0; padding: 0;">
+                <li><a href="index.html" style="color: white; text-decoration: none; font-weight: bold; transition: color 0.3s ease;">Accueil</a></li>
+                <li><a href="gallery.html" style="color: white; text-decoration: none; font-weight: bold; transition: color 0.3s ease;">Galerie</a></li>
+                <li><a href="contact.html" style="color: white; text-decoration: none; font-weight: bold; transition: color 0.3s ease;">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <section class="telegram-section">
+                <h2>🤖 Réservez via Telegram</h2>
+                <p>Utilisez notre bot Telegram pour effectuer vos réservations rapidement et facilement.</p>
+                <a href="https://t.me/jedolo_bot" class="telegram-btn">
+                    📱 Ouvrir le Bot Telegram
+                </a>
+            </section>
+
+            <section class="features">
+                <article class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Réservation Rapide</h3>
+                    <p>Processus de réservation simple et rapide via notre bot intelligent.</p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Service Sécurisé</h3>
+                    <p>Toutes vos informations sont traitées de manière confidentielle.</p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon">🇨🇲</div>
+                    <h3>100% Camerounais</h3>
+                    <p>Service local adapté aux besoins du Cameroun.</p>
+                </article>
+            </section>
+
+            <section>
+                <h2>🏙️ Villes Disponibles</h2>
+                <div class="cities-grid">
+                    <div class="city-card">Douala</div>
+                    <div class="city-card">Yaoundé</div>
+                    <div class="city-card">Bafoussam</div>
+                    <div class="city-card">Dschang</div>
+                    <div class="city-card">Buea</div>
+                    <div class="city-card">Bamenda</div>
+                    <div class="city-card">Kribi</div>
+                    <div class="city-card">Autres villes</div>
+                </div>
+            </section>
+
+            <section class="telegram-section">
+                <h2>💬 Comment ça marche ?</h2>
+                <ol style="text-align: left; max-width: 500px; margin: 0 auto;">
+                    <li>Cliquez sur le bouton Telegram ci-dessus</li>
+                    <li>Démarrez une conversation avec /start</li>
+                    <li>Suivez les instructions du bot</li>
+                    <li>Effectuez votre réservation</li>
+                </ol>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 JEDOLO - Développé par Swich Tech</p>
+            <p>Service de réservation automatisée</p>
+        </footer>
+    </div>
+
+    <script>
+        // Amélioration de l'expérience utilisateur
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animation d'entrée pour les cartes
+            const cards = document.querySelectorAll('.feature-card, .city-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+
+            // Effet de parallaxe léger
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const header = document.querySelector('header');
+                header.style.transform = `translateY(${scrolled * 0.3}px)`;
+            });
+        });
+    </script>
+</body>
+</html>
